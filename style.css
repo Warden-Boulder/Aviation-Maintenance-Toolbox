@@ -1,5 +1,11 @@
-a {
-  text-decoration: none;
+#results, .results {
+  color: gold;
+  margin-bottom: -10px;
+  padding-bottom: 10px;
+}
+
+#select optgroup {
+  font-weight: bold;
 }
 
 .airbus {
@@ -39,6 +45,87 @@ a {
   transform: skew(-20deg);
 }
 
+.card-container {
+  display: flex;
+  margin: 10px;
+  vertical-align: top;
+}
+
+.container {
+  display: flex;
+}
+
+.fail {
+  color: red;
+  font-weight: bold;
+  margin-bottom: -10px;
+}
+
+.legend {
+  background-color: #808080;
+  border: 2px solid #faf3e0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  min-height: 275px;
+  padding: 5px;
+  width: 200px;
+}
+
+.pass {
+  color: green;
+  font-weight: bold;
+  margin-bottom: -10px;
+}
+
+.recheck {
+  color: yellow;
+  font-weight: bold;
+  margin-bottom: -10px;
+}
+
+.ref, .ref strong {
+  border: solid 3px red;
+  color: red !important;
+  display: inline-block;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 7px;
+}
+
+.ref strong {
+  border: none;
+  display: inline;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.results-column {
+  min-width: 120px;
+}
+
+.results-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 0px;
+}
+
+.torque {
+  border: solid 3px grey;
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.1);
+  color: white;
+  display: inline-block;
+  transform: skew(-20deg);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: #0F172A;
   color: white;
@@ -60,14 +147,8 @@ button:disabled {
   opacity: 0.5;
 }
 
-.card-container {
-  display: flex;
-  margin: 10px;
-  vertical-align: top;
-}
-
-.container {
-  display: flex;
+details summary::-webkit-details-marker {
+  margin-right: 10px;
 }
 
 details summary::marker {
@@ -75,18 +156,8 @@ details summary::marker {
   content: "▶ ";
 }
 
-details summary::-webkit-details-marker {
-  margin-right: 10px;
-}
-
 details[open] summary::marker {
   content: "▼ ";
-}
-
-.fail {
-  color: red;
-  font-weight: bold;
-  margin-bottom: -10px;
 }
 
 footer {
@@ -132,65 +203,16 @@ header a {
   text-decoration: none;
 }
 
-.legend {
-  background-color: #808080;
-  border: 2px solid #faf3e0;
-  border-radius: 8px;
+input[type="number"] {
   box-sizing: border-box;
-  min-height: 275px;
-  padding: 5px;
-  width: 200px;
+  font-size: 16px;
+  min-height: 24px;
 }
 
 p {
   color: white;
   font-style: italic;
   font-weight: bold;
-}
-
-.pass {
-  color: green;
-  font-weight: bold;
-  margin-bottom: -10px;
-}
-
-.recheck {
-  color: yellow;
-  font-weight: bold;
-  margin-bottom: -10px;
-}
-
-.ref, .ref strong {
-  border: solid 3px red;
-  color: red !important;
-  display: inline-block;
-  font-style: italic;
-  font-weight: bold;
-  margin-bottom: 10px;
-  padding: 7px;
-}
-
-.ref strong {
-  border: none;
-  display: inline;
-  margin-bottom: 0;
-  padding: 0;
-}
-
-#results, .results {
-  color: gold;
-  margin-bottom: -10px;
-  padding-bottom: 10px;
-}
-
-.results-column {
-  min-width: 120px;
-}
-
-.results-container {
-  display: flex;
-  gap: 40px;
-  margin-top: 0px;
 }
 
 select {
@@ -200,10 +222,6 @@ select {
   color: black;
   font-size: 14px;
   padding: 7px;
-}
-
-#select optgroup {
-  font-weight: bold;
 }
 
 summary {
@@ -232,14 +250,30 @@ td, th {
   text-align: center;
 }
 
-.torque {
-  border: solid 3px grey;
-  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.1);
-  color: white;
-  display: inline-block;
-  transform: skew(-20deg);
+@media (max-width: 600px) {
+  .card {
+    box-sizing: border-box;
+    max-width: none;
+    width: 100%;
+  }
+
+  .card-container {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  button {
+    font-size: 16px;
+    min-height: 48px;
+    padding: 12px 16px;
+  }
 }
 
-.underline {
-  text-decoration: underline;
+@media (max-width: 600px) {
+  select {
+    box-sizing: border-box;
+    font-size: 16px;
+    max-width: 100%;
+    min-height: 44px;
+  }
 }
