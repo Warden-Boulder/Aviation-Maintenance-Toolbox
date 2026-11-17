@@ -2,11 +2,25 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css?v=35">
+    <script src="nav.js"></script>
   </head>
   <body>
     <header>
       <h1>Reference Cross-Sheet</h1>
-      <a href="index.html">Homepage | </a><a href="about.html">About</a>
+      <select onchange="Nav()" id="select">
+      <option value="null">---Toolbox Navigation---</option>
+      <optgroup label="General">
+        <option value="about">About</option>
+        <option value="home">Homepage</option>
+      </optgroup>
+      <optgroup label="Boeing Tools">
+        <option value="b737">B737 Tools</option>
+        <option value="b757">B757 Tools</option>
+      </optgroup>
+      <optgroup label="Misc Tools">
+        <option value="torque">Torque Tools</option>
+      </optgroup>
+    </select>
     </header>
     <details>
       <summary><h2 class="underline">Measurement Conversions</h2></summary><br>
