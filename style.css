@@ -42,6 +42,7 @@ a {
 body {
   background-color: #0F172A;
   color: white;
+  font-size: 13px;
 }
 
 button {
@@ -193,9 +194,16 @@ p {
 }
 
 select {
-  border: 25px;
-  margin-bottom: 25px;
-  margin-top: -10px;
+  background-color: white;
+  border: 3px solid gold;
+  border-radius: 5px;
+  color: black;
+  font-size: 14px;
+  padding: 7px;
+}
+
+#select optgroup {
+  font-weight: bold;
 }
 
 summary {
