@@ -27,21 +27,21 @@ function calculateRudder() {
   let diff = trimDecimals(diff_raw);
   
   if (first_total_raw < limits[1]) {
-    pass.push("1st total = "+first_total+" <br>(Limit is 0.4)");
+    pass.push("1st total = "+first_total);
   } else {
-    fail.push("1st total = "+first_total+" <br>(Limit is 0.4)");
+    fail.push("1st total = "+first_total);
   }
 
   if (second_total_raw < limits[1]) {
-    pass.push("2nd total = "+second_total+" <br>(Limit is 0.4)");
+    pass.push("2nd total = "+second_total);
   } else {
-    fail.push("2nd total = "+second_total+" <br>(Limit is 0.4)");
+    fail.push("2nd total = "+second_total);
   }
 
   if (diff_raw < limits[0]) {
-    pass.push("Freeplay difference is "+diff+" <br>(Limit is 0.04)");
+    pass.push("Freeplay difference is "+diff);
   } else {
-    fail.push("Freeplay difference is "+diff+" <br>(Limit is 0.04)");
+    fail.push("Freeplay difference is "+diff);
   }
 
   
