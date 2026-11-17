@@ -1,26 +1,24 @@
 function Clear() {
-  document.getElementById("results").innerHTML = "";
-  document.getElementById("results2").innerHTML = "";
-  document.getElementById("results757").innerHTML = "";
-  document.getElementById("torqueResults").innerHTML = "";
-  document.getElementById("torqueInput").value = "";
-  document.getElementById("extResults").innerHTML = "";
-  document.getElementById("tail757").innerHTML = "";
-  document.getElementById("tail757").value = "";
-  document.getElementById("NGmsn").innerHTML = "";
-  document.getElementById("Maxmsn").value = "";
-  document.getElementById("desire").value = "";
-  document.getElementById("length").value = "";
-  document.getElementById("extension").value = "";
-  document.getElementById("MD1").value = "";
-  document.getElementById("MD2").value = "";
-  document.getElementById("MD3").value = "";
-  document.getElementById("ND1").value = "";
-  document.getElementById("ND2").value = "";
-  document.getElementById("ND3").value = "";
-  document.getElementById("1l").value = "";
-  document.getElementById("1r").value = "";
-  document.getElementById("2l").value = "";
-  document.getElementById("2r").value = "";
-  document.getElementById("Weight").value = "";
+  const fieldIds = [
+    "1l", "1r", "2l", "2r", "desire", "extension", "length",
+    "Maxmsn", "MD1", "MD2", "MD3", "NGmsn", "ND1", "ND2", "ND3",
+    "tail757", "torqueInput", "Weight"
+  ];
+  const resultIds = [
+    "extResults", "results", "results2", "results757", "torqueResults"
+  ];
+
+  fieldIds.forEach((id) => {
+    const field = document.getElementById(id);
+    if (field && "value" in field) {
+      field.value = "";
+    }
+  });
+
+  resultIds.forEach((id) => {
+    const result = document.getElementById(id);
+    if (result) {
+      result.innerHTML = "";
+    }
+  });
 }
