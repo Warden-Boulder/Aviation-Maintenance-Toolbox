@@ -4,11 +4,25 @@
   <link rel="stylesheet" href="style.css?v=35">
   <script src="757.js?v=4"></script>
   <script src="clear.js?v=4"></script>
+  <script src="nav.js"></script>
 </head>
 <body>
   <header>
   <h1>B757 Tools</h1>
-    <a href="about.html">About | </a><a href="reference.html">Reference Sheet | </a><a href="index.html">Homepage</a>
+    <select onchange="Nav()" id="select">
+      <option value="null">---Toolbox Navigation---</option>
+      <optgroup label="General">
+        <option value="about">About</option>
+        <option value="home">Homepage</option>
+        <option value="reference">Reference Sheet</option>
+      </optgroup>
+      <optgroup label="Boeing Tools">
+        <option value="b737">B737 Tools</option>
+      </optgroup>
+      <optgroup label="Misc Tools">
+        <option value="torque">Torque Tools</option>
+      </optgroup>
+    </select>
 </header><br>
   <details>
     <summary><h3 class="underline">B757 Rudder Freeplay Check</h3></summary>
