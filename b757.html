@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css?v=35">
+  <script src="757.js?v=4"></script>
+  <script src="airbus.js"></script>
+  <script src="clear.js?v=4"></script>
+  <script src="toggle.js"></script>
+  <script src="torque.js?v=5"></script>
+</head>
+<body>
+  <header>
+  <h1>B757 Tools</h1>
+    <a href="about.html">About | </a><a href="reference.html">Reference Sheet | </a><a href="index.html">Homepage</a>
+</header><br>
+  <details>
+    <summary><h3 class="underline">B757 Rudder Freeplay Check</h3></summary>
+    <p class="ref">
+      <strong class="underline">Ref:</strong> B757 AMM 27-02-00-736-025 and/or any applicable AD/SB<br>
+      <strong class="underline">Note:</strong> Ensure compliance with any applicable reference and company SOP. This tool is for assistance only and not a substitute for technical data.<br>
+    </p>
+    <div class="card-wrapper" style="display: flex; gap: 20px; flex-wrap: wrap;">
+      <div class="card-container">
+        <div class="atari-card">
+          <p>Active PCA/PCU (Active System)</p>
+          <select>
+            <option>---Select---</option>
+            <option>Bottom PCA/PCU (Center System)</option>
+            <option>Middle PCA/PCU (Left System)</option>
+            <option>Top PCA/PCU (Right System)</option>
+          </select>
+          <p>Tail # / MSN (optional): <input type="text" id="tail757" placeholder="Tail # or MSN"/></p>
+          <p>1st reading (pushing right): <input type="number" id="1l" min="0" step="0.001" placeholder="Enter 1st value/reading" /></p>
+          <p>1st reading (pushing left): <input type="number" id="1r" min="0" step="0.001" placeholder="Enter 1st value/reading" /></p>
+          <p>2nd reading (pushing right): <input type="number" id="2l" min="0" step="0.001" placeholder="Enter 2nd value/reading" /></p>
+          <p>2nd reading (pushing left): <input type="number" id="2r" min="0" step="0.001" placeholder="Enter 2nd value/reading" /></p>
+          <button onclick="calculateRudder()">Calculate</button>
+          <button onclick="Clear()">Clear</button>
+          <div id="results757"></div>
+        </div>
+      </div>
+    <div class="card-container">
+      <div class="b757-legend">
+        <p class="underline" style="text-align: center; color: gold;">Legend</p>
+        <p>The 1st freeplay limit is <em><strong>0.400</strong></em></p>
+        <p>The 2nd freeplay limit is <em><strong>0.400</strong></em></p>
+        <p>The differential limit is <em><strong>0.040</strong></em></p>
+      </div>
+      </div>
+    </div>
+  </details>
+</body>
+</html>
